@@ -1,0 +1,54 @@
+{
+  "name": "remise",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": true
+  },
+  "properties": {
+    "issuedDate": {
+      "type": "date",
+      "required": true
+    },
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "bank": {
+      "type": "string",
+      "required": true
+    },
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "number": {
+      "type": "string"
+    },
+    "numberCheck": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "validateDate": {
+      "type": "date"
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "checks": {
+      "type": "hasMany",
+      "model": "check",
+      "foreignKey": "remise_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

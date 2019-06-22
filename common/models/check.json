@@ -1,0 +1,53 @@
+{
+  "name": "check",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": true
+  },
+  "properties": {
+    "number": {
+      "type": "string"
+    },
+    "bank": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "issuedDate": {
+      "type": "date"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "cashingDateDesired": {
+      "type": "date"
+    },
+    "remise_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "customer",
+      "foreignKey": "customerId"
+    },
+    "remise": {
+      "type": "belongsTo",
+      "model": "remise",
+      "foreignKey": "remise_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
