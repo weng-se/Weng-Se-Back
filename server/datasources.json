@@ -1,0 +1,7 @@
+{
+  "db": {
+    "url": "mongodb://weng-se-admin:wengse2018@ds046677.mlab.com:46677/weng-se",
+    "name": "db",
+    "connector": "mongodb"
+  }
+}

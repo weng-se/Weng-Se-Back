@@ -1,0 +1,76 @@
+{
+  "name": "order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "oldId": {
+      "type": "string",
+      "required": false
+    },
+    "deliveryDate": {
+      "type": "date",
+      "default": "$now",
+      "required": false
+    },
+    "customers": {
+      "type": "string",
+      "required": false
+    },
+    "shippers": {
+      "type": "string",
+      "required": false
+    },
+    "numberPallets": {
+      "type": "string",
+      "required": false
+    },
+    "printBPLabel": {
+      "type": "string",
+      "required": false
+    }, 
+    "preparation": {
+      "type": "string",
+      "required": false
+    },
+    "controllerBP": {
+      "type": "string",
+      "required": false
+    },
+    "controlBPDate": {
+      "type": "string",
+      "required": false
+    },
+    "printBL": {
+      "type": "string",
+      "required": false
+    },
+    "controllerBL": {
+      "type": "string",
+      "required": false
+    },
+    "total_ht": {
+      "type": "string",
+      "required": false
+    },
+    "driver": {
+      "type": "string",
+      "required": false
+    },
+    "controllerBLSigned": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+ }
+ 
