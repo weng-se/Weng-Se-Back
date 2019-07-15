@@ -150,7 +150,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "checks": {
+      "type": "hasMany",
+      "model": "check",
+      "foreignKey": "customerId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

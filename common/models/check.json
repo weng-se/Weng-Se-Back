@@ -39,7 +39,7 @@
   "relations": {
     "customer": {
       "type": "belongsTo",
-      "model": "customer",
+      "model": "costumer",
       "foreignKey": "customerId"
     },
     "remise": {
