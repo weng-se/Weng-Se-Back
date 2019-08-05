@@ -63,5 +63,12 @@
     "options": {
       "strictObjectIDCoercion": true
     }
+  },
+  "bank": {
+    "dataSource": "db",
+    "public": true,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
   }
 }
