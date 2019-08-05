@@ -1,0 +1,57 @@
+{
+  "name": "bank",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "status": {
+      "type": "string",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "number",
+      "required": true
+    },
+    "contact_id": {
+      "type": "string",
+      "required": false
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "editedBy": {
+      "type": "string"
+    },
+    "createdDate": {
+      "type": "date",
+      "default": "$now",
+      "required": false
+    },
+    "lastUpdatedDate": {
+      "type": "date",
+      "default": "$now",
+      "required": false
+    },
+    "comment": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    
+  },
+  "acls": [],
+  "methods": {}
+}
