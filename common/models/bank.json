@@ -23,7 +23,7 @@
       "type": "number",
       "required": true
     },
-    "contact_id": {
+    "contactId": {
       "type": "string",
       "required": false
     },
