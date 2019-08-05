@@ -20,28 +20,30 @@
       "required": true
     },
     "name": {
-      "type": "number",
+      "type": "string",
       "required": true
     },
-    "contactId": {
+    "contact": {
       "type": "string",
       "required": false
     },
     "createdBy": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "editedBy": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "createdDate": {
       "type": "date",
-      "default": "$now",
-      "required": false
+      "required": true,
+      "default": "$now"
     },
     "lastUpdatedDate": {
       "type": "date",
-      "default": "$now",
-      "required": false
+      "required": true,
+      "default": "$now"
     },
     "comment": {
       "type": "string",
