@@ -17,9 +17,12 @@
     },
     "type": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "civility": {
+      "type": "string"
+    },
+    "name": {
       "type": "string"
     },
     "firstName": {
@@ -27,7 +30,7 @@
     },
     "lastName": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "dateBirth": {
       "type": "date"
@@ -55,22 +58,30 @@
     },
     "department": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "timezone": {
       "type": "string"
     },
-    "address": {
+    "addressLine3": {
       "type": "string",
-      "required": true
+      "required": false
+    },
+    "addressLine4": {
+      "type": "string",
+      "required": false
+    },
+    "zip": {
+      "type": "string",
+      "required": false
     },
     "city": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "country": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "websiteURL": {
       "type": "string"
@@ -89,7 +100,11 @@
     },
     "title": {
       "type": "string",
-      "required": true
+      "required": false
+    },
+    "customerCode": {
+      "type": "string",
+      "required": false
     },
     "status": {
       "type": "string"
@@ -130,9 +145,6 @@
     "salesPerson": {
       "type": "string"
     },
-    "salesPerson": {
-      "type": "string"
-    },
     "isActive": {
       "type": "boolean"
     },
@@ -140,6 +152,9 @@
       "type": "boolean"
     },
     "paymentMethod": {
+      "type": "string"
+    },
+    "maxCredit": {
       "type": "string"
     },
     "bankReglement": {
