@@ -23,6 +23,10 @@
       "type": "string",
       "required": false
     },
+    "wengseAccount": {
+      "type": "boolean",
+      "default": false
+    },
     "createdBy": {
       "type": "string",
       "required": false
