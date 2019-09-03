@@ -141,4 +141,50 @@ module.exports = function(Check) {
 
 
 
+		
+		Check.updateAllCheck = function (updates, cb) {
+
+		
+		//var updates = [{id : "5d6d2b9f66fc7efdb6435624", remise_id: "5d4ed6062823840f5880e1c5"}, {id : "5d6d2d1566fc7efdb6435627", remise_id: "5d4ed6062823840f5880e1c5"}];
+		let total = 0;
+
+		updates.forEach(function(element) {
+			
+			Check.updateAll({id : element.id}, {remise_id :element.remise_id}, function(err, count) {
+				  if (err) {
+					console.error(err);
+				  }
+				  total += 1;
+				  console.log(total); // number of data updated
+				})
+				
+			})
+		
+
+		
+		     cb(null, total);
+   
+		   };
+
+	
+   
+		 Check.remoteMethod('updateAllCheck', {
+		   	accepts: [
+			    { arg: 'updates', type: 'array' },
+		   	],
+		   	returns: { 
+		   		arg: 'total', 
+		   		type: 'number' 
+		   	},
+			http: {
+		        path: '/updateAllCheck',
+		        verb: 'post'
+		    }
+		
+	   });
+
+
+
+
+
 };
