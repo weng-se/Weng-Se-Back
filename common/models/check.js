@@ -142,25 +142,23 @@ module.exports = function(Check) {
 
 
 		
-		Check.updateAllCheck = function (updates, cb) {
+	Check.updateAllCheck = function (updates, cb) {
 
 		
-		//var updates = [{id : "5d6d2b9f66fc7efdb6435624", remise_id: "5d4ed6062823840f5880e1c5"}, {id : "5d6d2d1566fc7efdb6435627", remise_id: "5d4ed6062823840f5880e1c5"}];
+		//var updates = [ "5d6d2b9f66fc7efdb6435624",  "5d6d2d1566fc7efdb6435627", "5d6e7e4be9192c3ba2da13fd"];
 		let total = 0;
-
-		updates.forEach(function(element) {
+		//let remise = "11111111"
+		for (var i = 1; i < updates.length; i++) {
 			
-			Check.updateAll({id : element.id}, {remise_id :element.remise_id}, function(err, count) {
-				  if (err) {
-					console.error(err);
-				  }
-				  total += 1;
-				  console.log(total); // number of data updated
-				})
-				
+		Check.updateAll({id : updates[i]}, {remise_id : updates[0]}, function(err, total) {
+			  if (err) {
+				console.error(err);
+			  }
+			  total ++ 
+			  console.log(total); // number of data updated
 			})
-		
-
+		}
+		 
 		
 		     cb(null, total);
    
@@ -169,19 +167,21 @@ module.exports = function(Check) {
 	
    
 		 Check.remoteMethod('updateAllCheck', {
-		   	accepts: [
-			    { arg: 'updates', type: 'array' },
-		   	],
-		   	returns: { 
-		   		arg: 'total', 
-		   		type: 'number' 
-		   	},
-			http: {
-		        path: '/updateAllCheck',
-		        verb: 'post'
-		    }
+		   accepts: [
+			    { arg: 'updates', type: 'array', http: { source: 'body' } },
+			
+		     
+		   ],
+		   returns: { arg: 'total', type: 'number' },
+		http: {
+	        path: '/updateAllCheck',
+	        verb: 'post'
+	    }
 		
 	   });
+
+
+
 
 
 
