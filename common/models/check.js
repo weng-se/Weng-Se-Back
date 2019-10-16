@@ -150,7 +150,7 @@ module.exports = function(Check) {
 		//let remise = "11111111"
 		for (var i = 1; i < updates.length; i++) {
 			
-		Check.updateAll({id : updates[i]}, {remise_id : updates[0]}, function(err, total) {
+		Check.updateAll({id : updates[i]}, {remise_id : updates[0], status: "ONGOING"}, function(err, total) {
 			  if (err) {
 				console.error(err);
 			  }
