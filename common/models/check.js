@@ -188,7 +188,7 @@ module.exports = function (Check) {
 		//var updates = [ "5d6d2b9f66fc7efdb6435624",  "5d6d2d1566fc7efdb6435627", "5d6e7e4be9192c3ba2da13fd"];
 		let total = 0;
 		//let remise = "11111111"
-		if (updates[0] = "Valide") {
+		if (updates[0] == "Valide") {
 			for (var i = 1; i < updates.length; i++) {
 
 				Check.updateAll({ id: updates[i] }, {  status: "CASHED" }, function (err, total) {
@@ -199,7 +199,7 @@ module.exports = function (Check) {
 					console.log(total); // number of data updated
 				})
 			}
-		} else if (updates[0] = "Rejeter") {
+		} else if (updates[0] == "Rejeter") {
 			for (var i = 1; i < updates.length; i++) {
 
 				Check.updateAll({ id: updates[i] }, { status: "REJECTED" }, function (err, total) {
@@ -210,7 +210,7 @@ module.exports = function (Check) {
 					console.log(total); // number of data updated
 				})
 			}
-		} else if (updates[0] = "ONGOING") {
+		} else if (updates[0] == "En attente") {
 			for (var i = 1; i < updates.length; i++) {
 
 				Check.updateAll({ id: updates[i] }, {  status: "ONGOING" }, function (err, total) {
@@ -221,7 +221,7 @@ module.exports = function (Check) {
 					console.log(total); // number of data updated
 				})
 			}
-		} else if (updates[0] = "PARTIAL") {
+		} else if (updates[0] == "Partiel") {
 			for (var i = 1; i < updates.length; i++) {
 
 				Check.updateAll({ id: updates[i] }, {  status: "PARTIAL" }, function (err, total) {
