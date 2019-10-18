@@ -47,7 +47,7 @@ module.exports = function (Check) {
 
 		let filter = {
 			where: {
-				issuedDate: { between: [fromTime, toTime] },
+				cashingDateDesired: { between: [fromTime, toTime] },
 			}
 		};
 
@@ -102,7 +102,7 @@ module.exports = function (Check) {
 
 		let filter = {
 			where: {
-				issuedDate: { between: [fromTime, toTime] },
+				cashingDateDesired: { between: [fromTime, toTime] },
 
 			}
 		};
