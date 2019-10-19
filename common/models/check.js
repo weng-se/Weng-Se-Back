@@ -211,6 +211,17 @@ module.exports = function (Check) {
 					console.log(total); // number of data updated
 				})
 			}
+		} else if (updates[0] == "Partiel") {
+			for (var i = 1; i < updates.length; i++) {
+
+				Check.updateAll({ id: updates[i] }, { status: "ONGOING" }, function (err, total) {
+					if (err) {
+						console.error(err);
+					}
+					total++
+					console.log(total); // number of data updated
+				})
+			}
 		}
 
 		cb(null, total);
