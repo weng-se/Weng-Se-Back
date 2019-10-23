@@ -10,7 +10,7 @@
     "number": {
       "type": "string"
     },
-    "bank": {
+    "bankId": {
       "type": "string"
     },
     "amount": {
@@ -46,6 +46,11 @@
       "type": "belongsTo",
       "model": "remise",
       "foreignKey": "remise_id"
+    },
+    "bank": {
+      "type": "belongsTo",
+      "model": "bank",
+      "foreignKey": "bankId"
     }
   },
   "acls": [],

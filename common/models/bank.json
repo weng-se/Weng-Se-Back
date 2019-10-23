@@ -11,6 +11,10 @@
       "type": "string",
       "required": false
     },
+    "id": {
+      "type": "string",
+      "required": true
+    },
     "title": {
       "type": "string",
       "required": true
@@ -52,8 +56,12 @@
   },
   "validations": [],
   "relations": {
-    
+    "checks": {
+      "type": "hasMany",
+      "model": "check",
+      "foreignKey": "bankId"
+    }
   },
-  "acls": [],
-  "methods": {}
+"acls": [],
+"methods": {}
 }
