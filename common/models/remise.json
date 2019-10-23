@@ -15,10 +15,6 @@
       "type": "string",
       "required": true
     },
-    "bank": {
-      "type": "string",
-      "required": true
-    },
     "amount": {
       "type": "number",
       "required": true
@@ -39,6 +35,9 @@
     },
     "comment": {
       "type": "string"
+    },
+    "bankId": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -47,6 +46,11 @@
       "type": "hasMany",
       "model": "check",
       "foreignKey": "remise_id"
+    },
+    "bank": {
+      "type": "belongsTo",
+      "model": "bank",
+      "foreignKey": "bankId"
     }
   },
   "acls": [],

@@ -60,7 +60,13 @@
       "type": "hasMany",
       "model": "check",
       "foreignKey": "bankId"
+    },
+    "remies": {
+      "type": "hasMany",
+      "model": "remise",
+      "foreignKey": "bankId"
     }
+
   },
 "acls": [],
 "methods": {}
